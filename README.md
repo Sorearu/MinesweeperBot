@@ -21,6 +21,9 @@ Also, the Windows XP version of the game was taken from http://www.minesweeper.i
 is the same version as that on actual XP systems.
 
 RECORDS:
+
 Beginner: 1 second
+
 Intermediate: 5 seconds
+
 Expert: It has not been able to solve Expert on its own yet.
