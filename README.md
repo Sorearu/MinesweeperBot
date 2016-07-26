@@ -19,3 +19,8 @@ work on other computers. If this is the case, I am hoping to address this once I
 
 Also, the Windows XP version of the game was taken from http://www.minesweeper.info/downloads/WinmineXP.html . I do not know if this
 is the same version as that on actual XP systems.
+
+RECORDS:
+Beginner: 1 second
+Intermediate: 5 seconds
+Expert: It has not been able to solve Expert on its own yet.
