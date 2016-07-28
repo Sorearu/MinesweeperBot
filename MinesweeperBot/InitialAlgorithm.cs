@@ -28,7 +28,7 @@ namespace MinesweeperBot
             else if (number == 3) { tile = msGame.Get(msGame.Height - 1, msGame.Width - 1); }
             else
             {
-                tile = new Tile(TileType.Empty, 0, 0);
+                tile = new Tile(TileType.Empty, 0, 0, 0, 0);
                 msGame.State = State.Simple;
             }
 
