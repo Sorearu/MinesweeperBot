@@ -94,7 +94,7 @@ namespace MinesweeperBot
 
                         // Find tile type and add to array
                         TileType type = TileDetector.DetermineTileType(c1, c2, c3, c4);
-                        tileField[i, j] = new Tile(type, x, y);
+                        tileField[i, j] = new Tile(type, x, y, i, j);
                     }
                 }
             }
