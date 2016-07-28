@@ -122,35 +122,35 @@ namespace MinesweeperBot
             surroundingTiles[4] = msGame.Get(row, col);
 
             //Top-left
-            if (top || left) { surroundingTiles[0] = new Tile(TileType.Empty, 0, 0); }
+            if (top || left) { surroundingTiles[0] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[0] = msGame.Get(row - 1, col - 1); }
 
             //Top
-            if (top) { surroundingTiles[1] = new Tile(TileType.Empty, 0, 0); }
+            if (top) { surroundingTiles[1] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[1] = msGame.Get(row - 1, col); }
 
             //Top-right
-            if (top || right) { surroundingTiles[2] = new Tile(TileType.Empty, 0, 0); }
+            if (top || right) { surroundingTiles[2] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[2] = msGame.Get(row - 1, col + 1); }
 
             //Left
-            if (left) { surroundingTiles[3] = new Tile(TileType.Empty, 0, 0); }
+            if (left) { surroundingTiles[3] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[3] = msGame.Get(row, col - 1); }
 
             //Right
-            if (right) { surroundingTiles[5] = new Tile(TileType.Empty, 0, 0); }
+            if (right) { surroundingTiles[5] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[5] = msGame.Get(row, col + 1); }
 
             //Bottom-left
-            if (bottom || left) { surroundingTiles[6] = new Tile(TileType.Empty, 0, 0); }
+            if (bottom || left) { surroundingTiles[6] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[6] = msGame.Get(row + 1, col - 1); }
 
             //Bottom
-            if (bottom) { surroundingTiles[7] = new Tile(TileType.Empty, 0, 0); }
+            if (bottom) { surroundingTiles[7] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[7] = msGame.Get(row + 1, col); }
 
             //Bottom-right
-            if (bottom || right) { surroundingTiles[8] = new Tile(TileType.Empty, 0, 0); }
+            if (bottom || right) { surroundingTiles[8] = new Tile(TileType.Empty, 0, 0, 0, 0); }
             else { surroundingTiles[8] = msGame.Get(row + 1, col + 1); }
 
             return surroundingTiles;

@@ -9,14 +9,16 @@ namespace MinesweeperBot
     class Tile
     {
         private TileType type;
-        private int x, y, effectiveNumber;
+        private int x, y, row, column, effectiveNumber;
         private bool isChecked, isFlagged, isNumber;
         
-        public Tile(TileType type, int x, int y)
+        public Tile(TileType type, int x, int y, int row, int column)
         {
             this.type = type;
             this.x = x;
             this.y = y;
+            this.row = row;
+            this.column = column;
             isChecked = false;
             isFlagged = false;
 
@@ -68,6 +70,16 @@ namespace MinesweeperBot
         {
             get { return effectiveNumber; }
             set { effectiveNumber = value; }
+        }
+
+        public int Row
+        {
+            get { return row; }
+        }
+
+        public int Column
+        {
+            get { return column; }
         }
     }
     public enum TileType
