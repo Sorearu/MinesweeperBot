@@ -11,12 +11,15 @@ namespace MinesweeperBot
     {
         protected override void FindFlags()
         {
-            throw new NotImplementedException();
         }
 
         protected override void FindSafeTiles()
         {
-            throw new NotImplementedException();
+            // Iterate over gamefield
+            // Find effective ones
+            // See if there are only 2 unclicked tiles
+            // If so, add those tiles to pool
+            // After loop, click random tile from pool
         }
     }
 }
