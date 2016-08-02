@@ -20,6 +20,7 @@ namespace MinesweeperBot
             // See if there are only 2 unclicked tiles
             // If so, add those tiles to pool
             // After loop, click random tile from pool
+            // test
         }
     }
 }
