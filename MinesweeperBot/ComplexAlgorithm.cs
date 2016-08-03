@@ -37,6 +37,7 @@ namespace MinesweeperBot
                                     Mouse.MoveToAndClick(tile.X, tile.Y, MouseButton.Right);
                                     currentTile.EffectiveNumber--;
                                     msGame.Update();
+                                    hasFoundAMove = true;
 
                                 }
                             }
@@ -81,6 +82,7 @@ namespace MinesweeperBot
                                     {
                                         Mouse.MoveToAndClick(tile.X, tile.Y, MouseButton.Left);
                                         msGame.Update();
+                                        hasFoundAMove = true;
                                     }
                                 }
                             }                            
@@ -88,22 +90,11 @@ namespace MinesweeperBot
                     }
                 }
             }
-            msGame.State = State.Simple;
+            if (hasFoundAMove) { msGame.State = State.Simple; }
+            else { msGame.State = State.Luck; }
         }
 
-        /* Helper method for both FindFlags() and FindSafeTiles()
-         * This method counts the number of unclicked tiles surrounding the 
-         * original tile being investigated.
-         */
-        private int CountSurroundingUnclickedTiles(Tile[] surroundingTiles)
-        {
-            int count = 0;
-            foreach (Tile tile in surroundingTiles)
-            {
-                if(tile.Type == TileType.Unclicked) { count++; }
-            }
-            return count;
-        }
+       
 
         /* Helper method for FindFlags()
          * This method determines, if there are three unclicked tiles in a row/column, what
@@ -289,30 +280,7 @@ namespace MinesweeperBot
             return tileSide;
         }
 
-        /* This method is used to calculate the
-         * effective number of every numbered tile
-         * that has not already been checked or flagged
-         */
-        private void CalculateEffectiveNumber()
-        {
-            for (int i = 0; i < msGame.Height; i++)
-            {
-                for (int j = 0; j < msGame.Width; j++)
-                {
-                    Tile currentTile = msGame.Get(i, j);
-                    if(currentTile.IsNumber && !currentTile.Checked && !currentTile.Flagged)
-                    {
-                        int flagCount = 0;
-                        foreach(Tile tile in GetSurroundingTiles(i, j))
-                        {
-                            if(tile.Type == TileType.Flag) { flagCount++; }
-                        }
-                        currentTile.EffectiveNumber = (int)currentTile.Type - flagCount;
-                       // System.Console.WriteLine("N is " + (int)currentTile.Type + " and EN is " + currentTile.EffectiveNumber);
-                    }
-                }
-            }
-        }
+        
 
 
     }
