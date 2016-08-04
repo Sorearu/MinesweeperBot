@@ -3,7 +3,7 @@ Bot written in C# to play the Windows XP version of the game.
 
 Hello, this is my first project that I have put on GitHub. As such, I have no idea how I should be doing things, so go easy on me.
 
-The bot is currently able to make all the moves necessary to solve the game on all difficulties. I just need to implement a way to make guesses. Note: with minesweeper, it is impossible to solve ALL games without ever guessing.
+The bot is currently able to make all the moves necessary to solve the game on all difficulties; including guesses when required.
 
 Code used to manipulate the mouse as well as the windows, were done using the windows32 api and were taken from various sources from 
 the internet. Everything else I have written on my own.
@@ -22,3 +22,12 @@ Beginner: 1 second
 Intermediate: 5 seconds
 
 Expert: 12 seconds
+
+#TODO:
+
+Add way for program to detect whether the game is in progress, won, or lost.
+  As such, use that to loop and restart games until a game is won
+  
+Clean up code
+
+
