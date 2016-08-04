@@ -1,5 +1,0 @@
-TO DO.
-
-Replace indices in surroundingTiles with those from the enum.
-Implement Lucky algorithm, which is where a guess will have to be made.
-Clean up code.
