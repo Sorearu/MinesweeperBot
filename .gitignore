@@ -47,9 +47,6 @@ Temporary Items
 .apdisk
 
 # Project files
-.vs/MinesweeperBot/v14/.suo
-MinesweeperBot/bin/Debug/MinesweeperBot.pdb
-MinesweeperBot/obj/Debug/MinesweeperBot.exe
-MinesweeperBot/bin/Debug/Screenshot.png
-MinesweeperBot/bin/Debug/MinesweeperBot.exe
-MinesweeperBot/obj/Debug/MinesweeperBot.pdb
+.vs/*
+MinesweeperBot/bin/Debug/*
+MinesweeperBot/obj/*
