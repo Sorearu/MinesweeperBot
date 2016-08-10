@@ -1,6 +1,0 @@
-c:\users\andy\documents\visual studio 2015\Projects\MinesweeperBot\MinesweeperBot\bin\Debug\MinesweeperBot.exe.config
-c:\users\andy\documents\visual studio 2015\Projects\MinesweeperBot\MinesweeperBot\bin\Debug\MinesweeperBot.exe
-c:\users\andy\documents\visual studio 2015\Projects\MinesweeperBot\MinesweeperBot\bin\Debug\MinesweeperBot.pdb
-c:\users\andy\documents\visual studio 2015\Projects\MinesweeperBot\MinesweeperBot\obj\Debug\MinesweeperBot.csprojResolveAssemblyReference.cache
-c:\users\andy\documents\visual studio 2015\Projects\MinesweeperBot\MinesweeperBot\obj\Debug\MinesweeperBot.exe
-c:\users\andy\documents\visual studio 2015\Projects\MinesweeperBot\MinesweeperBot\obj\Debug\MinesweeperBot.pdb
