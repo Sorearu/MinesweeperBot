@@ -48,6 +48,6 @@ Temporary Items
 
 # Project files
 MinesweeperBot.sln
-MinesweeperBot/obj/
-MinesweeperBot/bin/debug/
-.vs/
+MinesweeperBot/obj
+MinesweeperBot/bin/debug
+.vs
