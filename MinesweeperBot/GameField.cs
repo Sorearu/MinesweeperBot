@@ -14,8 +14,10 @@ namespace MinesweeperBot
         private Difficulty difficulty;
         private int gameWidth, gameHeight, tileSize, xStart, yStart, gap;
         private int x1, x2, x3, x4, y1, y2, y3, y4;
+        private int smileyX, smileyY, smileyPixel; 
         private Tile[,] tileField;
         private State state;
+        private Health health;
 
         public static GameField Instance
         {           
@@ -36,6 +38,8 @@ namespace MinesweeperBot
                 difficulty = Difficulty.Beginner;
                 gameWidth = 9;
                 gameHeight = 9;
+                smileyX = 76;
+                smileyY = 63;
 
             }
             else if (WindowController.WindowWidth == 282 && WindowController.WindowHeight == 368)
@@ -43,12 +47,16 @@ namespace MinesweeperBot
                 difficulty = Difficulty.Intermediate;
                 gameWidth = 16;
                 gameHeight = 16;
+                smileyX = 132;
+                smileyY = 63;
             }
             else if (WindowController.WindowWidth == 506 && WindowController.WindowHeight == 368)
             {
                 difficulty = Difficulty.Expert;
                 gameWidth = 30;
                 gameHeight = 16;
+                smileyX = 244;
+                smileyY = 63;
             }
 
             tileField = new Tile[gameHeight, gameWidth];
@@ -67,7 +75,11 @@ namespace MinesweeperBot
             x4 = 0;
             y4 = 0;
 
+            smileyPixel = 7;
+
             state = State.Initial;
+            health = Health.Alive;
+
         }
 
         public void Update()
@@ -101,6 +113,7 @@ namespace MinesweeperBot
 
         }
 
+
         public Tile Get(int i, int j)
         {
             return tileField[i, j];
@@ -122,6 +135,10 @@ namespace MinesweeperBot
             set { state = value; }
         }
 
+        public Health Health
+        {
+            get { return health; }
+        }
 
         public enum Difficulty
         {
@@ -134,5 +151,9 @@ namespace MinesweeperBot
         Initial, Simple, Complex, Luck
     }
 
+    enum Health
+    {
+        Alive, Dead
+    }
    
 }
