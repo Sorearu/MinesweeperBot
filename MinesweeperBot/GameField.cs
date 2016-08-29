@@ -31,6 +31,15 @@ namespace MinesweeperBot
             }
         }
 
+        public void ResetGame()
+        {
+            Mouse.MoveToAndClick(smileyX, smileyY, MouseButton.Left);
+            tileField = new Tile[gameHeight, gameWidth];
+            state = State.Initial;
+            Update();
+
+        }
+
         private GameField()
         {
             if (WindowController.WindowWidth == 170 && WindowController.WindowHeight == 256)
@@ -117,7 +126,6 @@ namespace MinesweeperBot
 
             health = TileDetector.DetermineHealth(smileyColour1, smileyColour2);
 
-            Console.WriteLine(health);
 
         }
 

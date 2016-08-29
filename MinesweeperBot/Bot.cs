@@ -18,8 +18,8 @@ namespace MinesweeperBot
             GameField msGame = GameField.Instance;
 
             msGame.Update();
-            int test = 0;
-            while(true)
+
+            while(msGame.Health == Health.Alive)
             {
                 Algorithm algorithm;
                 switch (msGame.State)
@@ -44,16 +44,9 @@ namespace MinesweeperBot
 
                 Health health = msGame.Health;
 
-                if(health == Health.Cool)
+                if(health == Health.Dead)
                 {
-                    Console.WriteLine("you won dude");
-                    break;
-                }
-
-                else if (health == Health.Dead)
-                {
-                    Console.WriteLine("you lost dude");
-                    break;
+                    msGame.ResetGame();
                 }
         
             } 
