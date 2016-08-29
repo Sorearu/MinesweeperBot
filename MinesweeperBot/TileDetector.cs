@@ -15,7 +15,7 @@ namespace MinesweeperBot
 
         static TileDetector()
         {
-            tileColours = new Bitmap(@"resources\tileColours.bmp");
+            tileColours = Properties.Resources.tileColours;
 
         }
 
