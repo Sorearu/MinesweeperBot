@@ -19,7 +19,7 @@ namespace MinesweeperBot
 
             msGame.Update();
             int test = 0;
-            while(test < 100)
+            while(true)
             {
                 Algorithm algorithm;
                 switch (msGame.State)
@@ -41,7 +41,21 @@ namespace MinesweeperBot
                         break;                    
                 }
                 algorithm.Execute();
-                test++;
+
+                Health health = msGame.Health;
+
+                if(health == Health.Cool)
+                {
+                    Console.WriteLine("you won dude");
+                    break;
+                }
+
+                else if (health == Health.Dead)
+                {
+                    Console.WriteLine("you lost dude");
+                    break;
+                }
+        
             } 
 
         }
