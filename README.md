@@ -26,8 +26,22 @@ Expert: 12 seconds
 #TODO:
 
 Add way for program to detect whether the game is in progress, won, or lost.
-  As such, use that to loop and restart games until a game is won
-  
+  As such, use that to loop and restart games until a game is won.
+
+Improve guessing algorithm so it always makes a guess if there are no
+guaranteed moves.
+
+Add a console menu to start bot as well as a way to stop it.
+
+Add a way to record win rates
+
 Clean up code
+
+#Stuff to do after initial completion:
+
+Improve algorithm so it considers a bigger range of tiles and therefore
+have the ability to consider non-obvious moves before having to guess
+
+
 
 
