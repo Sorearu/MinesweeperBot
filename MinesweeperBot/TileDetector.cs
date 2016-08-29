@@ -11,11 +11,12 @@ namespace MinesweeperBot
     class TileDetector
       
     {
-        private static Bitmap tileColours;
+        private static Bitmap tileColours, smileyFace;
 
         static TileDetector()
         {
             tileColours = Properties.Resources.tileColours;
+            smileyFace = Properties.Resources.smileyFace;
 
         }
 
@@ -42,6 +43,23 @@ namespace MinesweeperBot
             }
 
             return type;
+        }
+
+        public static Health DetermineHealth(Color smileyColour1, Color smileyColour2)
+        {
+            foreach (Health health in Enum.GetValues(typeof(Health)))
+            {
+                Color c1 = smileyFace.GetPixel((int)health, 0);
+                Color c2 = smileyFace.GetPixel((int)health, 1);
+
+                if (c1.Equals(smileyColour1) && c2.Equals(smileyColour2))
+                {
+                    return health;
+                }
+            }
+
+            return Health.Alive;
+
         }
 
     }

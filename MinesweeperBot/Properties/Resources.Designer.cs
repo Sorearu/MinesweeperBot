@@ -63,6 +63,16 @@ namespace MinesweeperBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap smileyFace {
+            get {
+                object obj = ResourceManager.GetObject("smileyFace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tileColours {
             get {
                 object obj = ResourceManager.GetObject("tileColours", resourceCulture);

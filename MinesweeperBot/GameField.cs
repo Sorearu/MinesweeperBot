@@ -14,7 +14,7 @@ namespace MinesweeperBot
         private Difficulty difficulty;
         private int gameWidth, gameHeight, tileSize, xStart, yStart, gap;
         private int x1, x2, x3, x4, y1, y2, y3, y4;
-        private int smileyX, smileyY, smileyPixel; 
+        private int smileyX, smileyY, smileyPixel1, smileyPixel2; 
         private Tile[,] tileField;
         private State state;
         private Health health;
@@ -75,7 +75,8 @@ namespace MinesweeperBot
             x4 = 0;
             y4 = 0;
 
-            smileyPixel = 7;
+            smileyPixel1 = 7;
+            smileyPixel2 = 10;
 
             state = State.Initial;
             health = Health.Alive;
@@ -110,6 +111,13 @@ namespace MinesweeperBot
                     }
                 }
             }
+
+            Color smileyColour1 = screenshot.GetPixel(smileyX + smileyPixel1, smileyY + smileyPixel1);
+            Color smileyColour2 = screenshot.GetPixel(smileyX + smileyPixel2, smileyY + smileyPixel2);
+
+            health = TileDetector.DetermineHealth(smileyColour1, smileyColour2);
+
+            Console.WriteLine(health);
 
         }
 
@@ -153,7 +161,7 @@ namespace MinesweeperBot
 
     enum Health
     {
-        Alive, Dead
+        Alive, Dead, Cool
     }
    
 }
