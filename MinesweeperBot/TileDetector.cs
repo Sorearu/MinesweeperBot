@@ -30,11 +30,13 @@ namespace MinesweeperBot
 
             foreach (TileType typeTemp in Enum.GetValues(typeof(TileType)))
             {
+                // Get pixels from file
                 Color tc1 = tileColours.GetPixel((int)typeTemp, 0);
                 Color tc2 = tileColours.GetPixel((int)typeTemp, 1);
                 Color tc3 = tileColours.GetPixel((int)typeTemp, 2);
                 Color tc4 = tileColours.GetPixel((int)typeTemp, 3);
 
+                // Compares the colours
                 if(tc1.Equals(c1) && tc2.Equals(c2) && tc3.Equals(c3) && tc4.Equals(c4))
                 {
                     type = typeTemp;
@@ -45,13 +47,19 @@ namespace MinesweeperBot
             return type;
         }
 
+        /*
+         * This method determines the current Health of the game by comparing 2 specified pixels
+         * of the smiley face with a premade set in the smileyFace.bmp file
+         */
         public static Health DetermineHealth(Color smileyColour1, Color smileyColour2)
         {
             foreach (Health health in Enum.GetValues(typeof(Health)))
             {
+                // Get pixels from file
                 Color c1 = smileyFace.GetPixel((int)health, 0);
                 Color c2 = smileyFace.GetPixel((int)health, 1);
 
+                // Compares the colours
                 if (c1.Equals(smileyColour1) && c2.Equals(smileyColour2))
                 {
                     return health;

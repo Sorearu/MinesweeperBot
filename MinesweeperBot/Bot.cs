@@ -19,9 +19,12 @@ namespace MinesweeperBot
 
             msGame.Update();
 
+            // Bot loop, continues until it wins
             while(msGame.Health == Health.Alive)
             {
                 Algorithm algorithm;
+
+                // Select algorithm depending on State
                 switch (msGame.State)
                 {
                     case State.Initial:
@@ -44,6 +47,7 @@ namespace MinesweeperBot
 
                 Health health = msGame.Health;
 
+                // Resets if it hits a mine
                 if(health == Health.Dead)
                 {
                     msGame.ResetGame();

@@ -80,7 +80,7 @@ namespace MinesweeperBot
             graphicsSS.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y,
                             0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
 
-            bitmapSS.Save("Screenshot.png", ImageFormat.Png);
+            
             return bitmapSS;
 
 

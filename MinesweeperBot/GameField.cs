@@ -12,13 +12,26 @@ namespace MinesweeperBot
     {
         private static GameField instance;
         private Difficulty difficulty;
+
         private int gameWidth, gameHeight, tileSize, xStart, yStart, gap;
+
+        // Each x-y pair represents the relative pixel position of each pixel
+        // used to determine the tile type
         private int x1, x2, x3, x4, y1, y2, y3, y4;
+
+        // smileyX and smileyY is the position of the smiley face.
+        // smileyPixel1 and smileyPixel2 are the relative pixel positions
+        // used to determine the smiley face type.
         private int smileyX, smileyY, smileyPixel1, smileyPixel2; 
+
         private Tile[,] tileField;
         private State state;
         private Health health;
 
+        /*
+         * This method returns the Singleton instance of GameField.
+         * This ensures that there is only one instance.
+         */
         public static GameField Instance
         {           
             get
@@ -31,6 +44,7 @@ namespace MinesweeperBot
             }
         }
 
+        // Resets the game board
         public void ResetGame()
         {
             Mouse.MoveToAndClick(smileyX, smileyY, MouseButton.Left);
@@ -92,6 +106,10 @@ namespace MinesweeperBot
 
         }
 
+        /*
+         * Updates the game board by taking a screenshot of the screen
+         * and determining the tiles in the game.
+         */ 
         public void Update()
         {
    
@@ -121,9 +139,11 @@ namespace MinesweeperBot
                 }
             }
 
+            // Get smiley face colours
             Color smileyColour1 = screenshot.GetPixel(smileyX + smileyPixel1, smileyY + smileyPixel1);
             Color smileyColour2 = screenshot.GetPixel(smileyX + smileyPixel2, smileyY + smileyPixel2);
 
+            // Determine Health of the game
             health = TileDetector.DetermineHealth(smileyColour1, smileyColour2);
 
 
