@@ -27,6 +27,8 @@ Expert: 10 seconds
 
 Clean up code
 
+Record success rate and average times
+
 #Stuff to do after initial completion:
 
 Improve algorithm so it considers a bigger range of tiles and therefore
