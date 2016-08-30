@@ -1,6 +1,8 @@
 # MinesweeperBot
 Bot written in C# to play the Windows XP version of the game.
 
+A demo can been seen here: https://www.youtube.com/watch?v=4UwrU7GD1VQ
+
 The bot is currently able to make all the moves necessary to solve the game on all difficulties; including guesses when required.
 
 Code used to manipulate the mouse as well as the windows, were done using the windows32 api and were taken from various sources from 
