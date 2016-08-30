@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MinesweeperBot
 {
-    // TO DO
+    // This is the guessing algorithm; when the bot can no longer
+    // find any guaranteed safe moves.
     class LuckyAlgorithm : Algorithm
     {
         protected override void FindFlags()
