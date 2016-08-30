@@ -25,13 +25,7 @@ Expert: 10 seconds
 
 #TODO:
 
-Add a console menu to start bot as well as a way to stop it.
-
-Add a way to record win rates
-
 Clean up code
-
-Record demo of bot 
 
 #Stuff to do after initial completion:
 
