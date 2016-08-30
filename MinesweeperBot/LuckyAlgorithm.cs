@@ -12,7 +12,7 @@ namespace MinesweeperBot
         protected override void FindFlags()
         {
         }
-
+        // jello
         protected override void FindSafeTiles()
         {
             CalculateEffectiveNumber();
