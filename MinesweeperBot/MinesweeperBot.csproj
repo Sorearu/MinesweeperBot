@@ -74,9 +74,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tileColours.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tileColours.bmp" />
   </ItemGroup>
   <ItemGroup>
